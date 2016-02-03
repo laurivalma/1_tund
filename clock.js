@@ -1,6 +1,14 @@
 window.onload = function(){
-  writeDate();
   var clock = document.getElementById('clock');
+
+  writeDate();
+
+  window.setInterval(function(){
+
+    writeDate();
+
+  }, 500);
+
 };
 
 function writeDate(){
