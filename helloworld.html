@@ -5,12 +5,30 @@
     <title>Hello world</title>
   </head>
   <body>
-    <ul id="list">
-      <li><a href=""></a></li>
-      <li><a href=""></a></li>
-      <li><a href=""></a></li>
-      <li><a href=""></a></li>
-      <li><a href=""></a></li>
-    </ul>
+    Eesnimi:<input type="text" id="first-name"><br>
+    Perenimi:<input type="text" id="last-name">
+    <input type="submit" value="Tervita" onclick="submit()">
+
+    <div id="output"></div>
+    <script type="text/javascript">
+
+      var first_name;
+      var last_name;
+
+      function welcome(){
+        console.log("Töötab");
+      }
+      function submit(){
+        //saan kätte väärtused
+        first_name = document.getElementById('first-name').value;
+        last_name = document.getElementById('last-name').value;
+
+        console.log("Tere "+first_name+" "+last_name+"!");
+
+        document.getElementById('output').innerHTML = '<strong>Tere </strong>'+first_name+' '+last_name;
+      }
+
+    </script>
+
   </body>
 </html>
